@@ -339,7 +339,7 @@ const sourceHtml = `
 
     const signaturePad = new SignaturePad(canvas,{
         onEnd: () => {
-            const data = signaturePad.toDataURL('image/png');
+            const data = signaturePad.toDataURL('image/jpeg');
             const payload = JSON.stringify({
                 type: 'SAVE_SIGNATURE',
                 dataURI: data
@@ -353,7 +353,7 @@ const sourceHtml = `
         
         switch (event.data) {
             case 'SAVE_SIGNATURE':
-                const data = signaturePad.toDataURL('image/png');
+                const data = signaturePad.toDataURL('image/jpeg');
                 const payload = JSON.stringify({
                     type: 'SAVE_SIGNATURE',
                     dataURI: data
